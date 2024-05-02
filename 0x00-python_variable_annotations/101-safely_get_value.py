@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
-""" more invloved type annotations
+""" Generic type annotations module
 """
-
 from typing import Any, Mapping, Optional, TypeVar, Union
 
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping, key: Any, 
-                    default: Union[T, None] = None) \
-                    -> Union[Any, T]:
-    """ get value from dictionary
-    """
+def safely_get_value(dct: Mapping, key: Any,
+                     default: Optional[T] = None) \
+                     -> Union[Any, T]:
+    """ Function to get item from a mapping object """
     if key in dct:
         return dct[key]
     else:
