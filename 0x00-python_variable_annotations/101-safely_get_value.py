@@ -2,7 +2,7 @@
 """ more invloved type annotations
 """
 
-from typing import Mapping, Any, Union, TypeVar
+from typing import Any, Mapping, Optional, TypeVar, Union
 
 T = TypeVar('T')
 
