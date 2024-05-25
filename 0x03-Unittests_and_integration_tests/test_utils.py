@@ -85,3 +85,6 @@ class TestMemoize(unittest.TestCase):
             self.assertEqual(test_class.a_property, 42)
             self.assertEqual(test_class.a_property, 42)
             mocked.assert_called_once()
+
+if __name__ == "__main__":
+    unittest.main()
