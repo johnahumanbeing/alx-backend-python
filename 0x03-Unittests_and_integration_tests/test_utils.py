@@ -46,7 +46,7 @@ class TestGetJson(unittest.TestCase):
         ("http://holberton.io", {"payload": False})
     ]
     )
-    @patch("request.get")
+    @patch("requests.get")
     def test_get_json(
         self, test_url: str, test_payload: Dict[str, Any], mock_get: Mock
         ) -> None:
