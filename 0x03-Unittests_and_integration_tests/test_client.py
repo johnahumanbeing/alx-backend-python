@@ -11,12 +11,10 @@ from fixtures import TEST_PAYLOAD
 class TestGithubOrgClient(unittest.TestCase):
     """ Test GithubOrgClient class.
     """
-    @parameterized.expand(
-        [
-        ("google"),
-        ("abc")
-    ]
-    )
+    @parameterized.expand([
+        ("google",),
+        ("abc",)
+    ])
     @patch("client.get_json", return_value={"payload": True})
     def test_org(self, org_name: str, mock_get: Mock) -> None:
         """Test GithubOrgClient.org method."""
